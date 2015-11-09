@@ -1,0 +1,18 @@
+<% include header %>
+    <div class="container">
+      <div class="jumbotron">
+        <img src="images/chineselink.png"></img>
+        <form class="form" style="padding-top:30px;" action="/" method="get">
+          <div class="form-group">
+            <label><%= __("This is Your Chinese URL") %></label>
+          </div>
+          <div class="form-group">
+            <a href="<%= url %>"><%= url %></a>
+          </div>
+          <button type="submit" class="btn btn-default"><%= __("Generate Another") %></button>
+        </form>
+      </div>
+    </div>
+<% include footer %>
+
+
