@@ -25,13 +25,11 @@ for(var i=0; i < word.length; i++){
 	letters.push(word[i])
 }
 
-module.exports = {
-	genurl: function(){
-		var url = "";
-		for(var i=0; i<4; i++){
-			var letter = letters[Math.floor(Math.random()*letters.length)];
-			url = url + letter;
-		}
-		return url;
+exports.genPath = function(){
+	var url = "";
+	for(var i=0; i<4; i++){
+		var letter = letters[Math.floor(Math.random()*letters.length)];
+		url = url + letter;
 	}
+	return url;
 }

@@ -3,7 +3,7 @@
 express = require('express');
 app = express();
 I18n = require('cloud/i18n-parse/i18n.js');
-gen = require('cloud/gen.js');
+link = require('cloud/route/link.js');
 
 I18n.expressBind(app, {
   "locales": ["zh_TW", "en"],
@@ -21,11 +21,7 @@ app.get('/', function(req, res) {
 app.get('/generate', function(req, res){
   res.redirect('/');
 });
-app.post('/generate', function(req, res){
-  res.render('generate', { url: 'http://suta.us.to/'+gen.genurl() });
-});
-app.get('/:url', function(req, res) {
-  res.render('hello', { message: req.params.url });
-});
+app.post('/generate', link.generate);
+app.get('/:path', link.redirectTo);
 
 app.listen();
