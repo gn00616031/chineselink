@@ -1,4 +1,4 @@
 # chineselink
-A simple Parse web app.
-This web can transfer your URL to a shorl URL with Chinese letters.
+A simple Parse web app. <br />
+This web can transfer your URL to a short URL with Chinese letters. <br />
 Please visit http://suta.us.to
